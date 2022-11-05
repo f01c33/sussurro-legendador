@@ -1,0 +1,23 @@
+{
+    "canais": [
+        {
+            "name": "Nome do canal",
+            "url": "https://www.youtube.com/channel/___mude_aqui___"
+        }
+    ],
+    "processados": [
+        {
+            "channel": "Nome do canal",
+            "brrr": [
+                {
+                    "id": "123",
+                    "title": "teste",
+                    "duration": 123,
+                    "duration_string": "123",
+                    "upload_date": "123"
+                }
+            ],
+            "feito": []
+        }
+    ]
+}
