@@ -27,12 +27,12 @@ from tqdm import tqdm
 # medium 	769 M
 # large 	1550 M 
 MODEL_SIZE = "medium" 
-SUBTITLES_FORMAT = "vtt"
+SUBTITLES_FORMAT = "srt"
 # DEVICE = "gpu" # todo: implementar isso
 
 def make_subtitles(videos, model_name="small", output_dir=".", overwriteTitle=None, subtitles_format=SUBTITLES_FORMAT, verbose=False, task="transcribe", language=None, break_lines=0, args={
-    "model": "small",
-    "format": "vtt",
+    "model": MODEL_SIZE,
+    "format": SUBTITLES_FORMAT,
     "output_dir": ".",
     "verbose": False,
     "task": "transcribe",
@@ -173,12 +173,12 @@ def transcribe(workspaceIdx):
         output_dir=ch_name,
         overwriteTitle="_".join([
             ch_name,
-            vid["id"],
             vid["upload_date"],
+            vid["id"],
             str(vid["duration"]),
             vid["title"]
         ]),
-        subtitles_format="vtt",
+        subtitles_format=SUBTITLES_FORMAT,
         verbose=False,
         task="transcribe",
         language="pt",
